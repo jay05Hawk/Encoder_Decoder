@@ -1,5 +1,35 @@
 # Encoder_Decoder
 
+$\color{blue}{\text{Encoder:}}$
+Encoder models use only the encoder of a Transformer model. At each stage, the attention layers can access all the words in the initial sentence. These models are often characterized as having “bi-directional” attention, and are often called auto-encoding models.
+
+Encoder models are best suited for tasks requiring an understanding of the full sentence, such as sentence classification, named entity recognition (and more generally word classification), and extractive question answering.
+
+Representatives of this family of models include:
+
+$\color{blue}{\text{ALBERT}}$
+$\color{red}{\text{BERT}}$
+$\color{blue}{\text{DistilBERT}}$
+$\color{red}{\text{ELECTRA}}$
+$\color{blue}{\text{RoBERTa}}$
+
+$\color{blue}{\text{Decoder:}}$
+
+Decoder models use only the decoder of a Transformer model. At each stage, for a given word the attention layers can only access the words positioned before it in the sentence. These models are often called auto-regressive models.
+
+The pretraining of decoder models usually revolves around predicting the next word in the sentence.
+
+These models are best suited for tasks involving text generation.
+
+Representatives of this family of models include:    
+
+$\color{blue}{\text{CTRL}}$
+$\color{red}{\text{GPT}}$
+$\color{blue}{\text{GPT-2}}$
+$\color{red}{\text{Transformer XL}}$
+
+
+
 ## Encoder-Decoder model and implementation of RNN
 
 Encoder-Decoder (encoding-decoding) is a very common model framework in deep learning. For example, auto-encoding of unsupervised algorithms is designed and trained with the structure of encoding-decoding; Is the encoding-decoding framework of CNN-RNN; for example, the neural network machine translation NMT model is often the LSTM-LSTM encoding-decoding framework. 
